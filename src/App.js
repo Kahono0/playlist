@@ -1,20 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
-const musicp = [
-  {
-    title: "The Sign5",
-    artist: "Ace of Base",
-  },
-  {
-    title: "The Sign1",
-    artist: "Ace of Base",
-  },
-  {
-    title: "The Sign0",
-    artist: "Ace of Base",
-  }
-]
+const musicp = []
 
 const Listl = (props) => {
   return (
@@ -100,6 +87,7 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
 
