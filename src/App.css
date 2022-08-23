@@ -1,5 +1,5 @@
 .App{
-  width:700px;
+  width:750px;
   background-color:#002B5C;
   margin: auto;
   padding: 1rem;
@@ -25,6 +25,7 @@ h2{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   margin-top: 2rem;
 }
 
@@ -32,7 +33,7 @@ h2{
   list-style: none;
   width:40%;
   background-color: #002B5C;
-  margin:2rem;
+  margin:1rem;
   padding:1rem 0.6rem;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
@@ -49,4 +50,38 @@ h2{
   color:#3ae102;
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
+}
+
+
+.button{
+  color:white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width:fit-content;
+  background-color: #3ae102;
+  border-radius:35px;
+  padding:0.5rem 4rem;
+  cursor: pointer;
+}
+
+.add-container{
+  text-align: center;
+}
+input[type="text"]{
+  font-size: 1.5rem;
+  margin: 2rem 2rem 0 2rem;
+  width:10rem;
+  border: none;
+}
+
+input[type="submit"]{
+  font-size: 1.5rem;
+  margin: 2rem;
+  width:10rem;
+  border: none;
+  background-color: #3ae102;
+  border-radius:35px;
+  padding:0.5rem 4rem;
+  cursor: pointer;
 }

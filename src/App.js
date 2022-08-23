@@ -1,16 +1,34 @@
 import { useState } from 'react';
 import './App.css';
 
-const music = [
+const musicp = [
   {
-    title: "The Sign",
+    title: "The Sign5",
     artist: "Ace of Base",
   },
   {
-    title: "The Sign",
+    title: "The Sign1",
+    artist: "Ace of Base",
+  },
+  {
+    title: "The Sign0",
     artist: "Ace of Base",
   }
 ]
+
+const Listl = (props) => {
+  return (
+    props.musics.map((item) => {
+      return (
+        <div className="list">
+          <li key={item.title}>{item.title}</li>
+          <li key={item.title}>{item.artist}</li>
+        </div>
+      );
+    })
+
+  );
+}
 
 const Head = () => {
   const [time, setTime] = useState("");
@@ -30,19 +48,45 @@ const Head = () => {
   );
 }
 
+const Add = () => {
+  const [music, setMusic] = useState([]);
+  const [add, setAdd] = useState(false);
 
-const List = () => {
+
+  const addMusic = (e) => {
+    e.preventDefault();
+    console.log(e.target.title.value);
+    console.log(e.target.artist.value);
+    musicp.push({
+      title: e.target.title.value,
+      artist: e.target.artist.value
+    });
+    setMusic(music => [...musicp]);
+    setAdd(!add);
+    e.target.reset();
+  }
   return (
-    music.map((item) => {
-      return (
-        <div className="list">
-          <li>{item.title}</li>
-          <li>{item.artist}</li>
-        </div>
-      );
-    })
+    <>
+      <div className="list-container">
+        <Listl musics={music} />
+      </div>
+      <div className="add-container">
+        <buton className="button" onClick={() => setAdd(!add)}>Add</buton>
+      </div>
+      {add && <div className="add">
+        <form onSubmit={addMusic}>
+          <input type="text" name="title" placeholder="Title" />
+          <input type="text" name="artist" placeholder="Artist" /><br/>
+          <input type="submit" value="Add" />
+        </form>
+      </div>
+      }
+    </>
   );
 }
+
+
+
 
 function App() {
   return (
@@ -50,8 +94,8 @@ function App() {
       <Head />
       <h2>Your Playlist:</h2>
       <div className="list-container">
-      <List />
       </div>
+      <Add />
     </div>
   );
 }
