@@ -48,6 +48,7 @@ const Head = () => {
   );
 }
 
+
 const Add = () => {
   const [music, setMusic] = useState([]);
   const [add, setAdd] = useState(false);
@@ -101,3 +102,8 @@ function App() {
 }
 
 export default App;
+
+
+//TODO
+//write components in a less complicated way
+//add key to list items
