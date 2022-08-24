@@ -5,11 +5,11 @@ const musicp = []
 
 const Listl = (props) => {
   return (
-    props.musics.map((item) => {
+    props.musics.map((item,key) => {
       return (
         <div className="list">
-          <li key={item.title}>{item.title}</li>
-          <li key={item.title}>{item.artist}</li>
+          <li key={key}>{item.title}</li>
+          <li key={key}>{item.artist}</li>
         </div>
       );
     })
@@ -59,7 +59,7 @@ const Add = () => {
         <Listl musics={music} />
       </div>
       <div className="add-container">
-        <buton className="button" onClick={() => setAdd(!add)}>Add</buton>
+        {!add && <button className="button" onClick={() => setAdd(!add)}>Add</button>}
       </div>
       {add && <div className="add">
         <form onSubmit={addMusic}>
@@ -81,8 +81,6 @@ function App() {
     <div className="App">
       <Head />
       <h2>Your Playlist:</h2>
-      <div className="list-container">
-      </div>
       <Add />
     </div>
   );
