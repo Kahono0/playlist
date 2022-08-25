@@ -27,23 +27,21 @@ h2{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: fit-content;
+  max-height: 450px;
   margin-top: 2rem;
   overflow-y: auto;
-  background-color: red;
-  height: 550px;
+  padding: 1rem;
 }
 
 .list{
   list-style: none;
   width:40%;
-  height: 100px;
+  height:fit-content;
+
   background-color: #002B5C;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  margin-top:1rem;
   padding:1rem 0.6rem;
+  margin-top: 1rem;
   box-shadow: rgba(0, 0, 0, 0.306) 0px 0px 10px 5px;
 }
 
